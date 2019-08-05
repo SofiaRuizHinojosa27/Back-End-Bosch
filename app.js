@@ -2,15 +2,15 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 
-const ProductCtrl = require('./controllers/product')
+const ProjectCtrl = require('./controllers/project')
 
 app.use(bodyParser.urlencoded({ extended:false }))
 app.use(bodyParser.json())
 
-app.get('/api/product', ProductCtrl.getProducts)
-app.get('/api/product/:productId', ProductCtrl.getProduct)
-app.post('/api/product', ProductCtrl.saveProduct)
-app.put('/api/product/:productId', ProductCtrl.updateProduct)
-app.delete('/api/product/:productId', ProductCtrl.deleteProduct)
+app.get('/api/project', ProjectCtrl.getProjects)
+app.get('/api/project/:projectId', ProjectCtrl.getProject)
+app.post('/api/project', ProjectCtrl.saveProject)
+app.put('/api/project/:projectId', ProjectCtrl.updateProject)
+app.delete('/api/project/:projectId', ProjectCtrl.deleteProject)
 
 module.exports = app
