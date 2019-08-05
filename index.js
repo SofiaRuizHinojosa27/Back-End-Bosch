@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const app = require('./app')
 const port = process.env.PORT || 3001
 
-mongoose.connect('mongodb://localhost:27017/shop', (err,res) => {
+mongoose.connect('mongodb+srv://fundacion:bosch@cluster0-ax7t2.mongodb.net/test?retryWrites=true&w=majority', (err,res) => {
     if(err) {
         return console.log('error al conectar a la base de datos')
     }
