@@ -52,7 +52,7 @@ function updateProject(req, res){
 }
 
 function deleteProject(req, res){
-    let projecttId = req.params.projecttId
+    let projectId = req.params.projecttId
 
     Project.findById(projectId,(err, project) => {
         if (err) res.status(500).send({message:`Error al borrar projecto: ${err}`})
