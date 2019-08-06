@@ -41,7 +41,7 @@ function saveProject(req, res){
 }
 
 function updateProject(req, res){
-    let projectId = req.params.projecttId
+    let projectId = req.params.projectId
     let update = req.body
 
     Project.findByIdAndUpdate(projectId, update, (err, projectUpdated) => {
